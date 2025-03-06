@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, getEntry } from 'astro:content';
+export const prerender = true;
+export async function getStaticPaths() {
+  const entries = await getCollection("movies");
+  return entries.map((entry) =>  ({
+    params: { slug: entry.id },
+    props: entry.data
+  }));
+}
+
+type Props = {
+  title: string;
+  castMembers: {
+    name: string;
+    characterName: string;
+  }[];
+};
+
+const {
+  title, castMembers: cast,
+} = Astro.props as Props;
+// const movie = await getEntry("movies", slug);
+
+---
+
+<Layout>
+   <h1>{title}</h1>
+   <!-- <p>{movie.overview}</p> -->
+   <h2>Cast</h2>
+   <ul>
+     {cast.map((actor) => (
+       <li>{actor.characterName}</li>
+     ))}
+   </ul>
+</Layout>

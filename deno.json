@@ -1,0 +1,23 @@
+{
+  "unstable": [
+    "sloppy-imports"
+  ],
+  "tasks": {
+    "sanity-type": {
+      "dependencies": [
+        "sanity-typegen",
+        "sanity-extract-schema"
+      ]
+    }
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "recommended"
+      ],
+      "exclude": [
+        "no-sloppy-imports"
+      ]
+    }
+  }
+}

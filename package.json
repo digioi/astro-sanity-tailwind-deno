@@ -6,9 +6,38 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "check": "astro check",
+    "astro": "astro",
+    "sanity": "npx sanity",
+    "sanity-extract-schema": "npx sanity schema extract --enforce-required-fields",
+    "sanity-typegen": "npx sanity typegen generate"
   },
   "dependencies": {
-    "astro": "^5.4.2"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.2.1",
+    "@sanity/astro": "^3.2.6",
+    "@sanity/cli": "^3.78.0",
+    "@sanity/client": "^6.28.3",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "astro": "^5.4.2",
+    "daisyui": "^5.0.0",
+    "groq": "^3.78.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-is": "^19.0.0",
+    "sanity": "^3.78.0",
+    "styled-components": "^6.1.15",
+    "@sanity/vision": "^3.78.0",
+    "react-icons": "^3.11.0",
+    "ts-pattern": "^5.6.2",
+    "typescript": "^5.8.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "^5.0.2",
+    "@types/react": "^18.0.25",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0"
   }
 }
