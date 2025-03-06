@@ -1,12 +1,12 @@
 ---
+import "../styles/tailwind.css";
 import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
 ---
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
+<div class="hero" style={`background-image: url(${background.src});`} data-theme=>
+	<div class="hero-content">
+		<section>
 			<a href="https://astro.build"
 				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
 			>
@@ -25,7 +25,7 @@ import background from '../assets/background.svg';
 				</a>
 			</section>
 		</section>
-	</main>
+	</div>
 
 	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
 		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,6 @@ import background from '../assets/background.svg';
 		display: flex;
 		align-items: center;
 		padding: 10px 12px;
-		color: #111827;
 		text-decoration: none;
 		transition: color 0.2s;
 	}
@@ -113,23 +112,12 @@ import background from '../assets/background.svg';
 		box-shadow: none;
 	}
 
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
 
 	h2 {
 		margin: 0 0 1em;
 		font-weight: normal;
-		color: #111827;
 		font-size: 20px;
+		color: #111827;
 	}
 
 	p {

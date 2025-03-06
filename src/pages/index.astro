@@ -1,4 +1,6 @@
 ---
+import "../styles/tailwind.css";
+import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
@@ -9,8 +11,9 @@ const movies = await getCollection('movies');
 ---
 
 <Layout>
-  <div class="container m-auto">
-    <h1 class="text-3xl font-bold">Movies</h1>
+  <Welcome />
+  <div class="container m-auto mt-4">
+    <h1 class="text-5xl text-red-400 font-bold">Movies</h1>
     <ul>
       {movies.map((movie) => (
         <li>
