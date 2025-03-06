@@ -1,14 +1,15 @@
-import { defineConfig } from 'sanity'
-import { structureTool } from 'sanity/structure'
-import { visionTool } from '@sanity/vision'
-import { schemaTypes } from './studio/schemaTypes'
+import { defineConfig } from "sanity";
+import { structureTool } from "sanity/structure";
+import { visionTool } from "@sanity/vision";
+import process from "node:process";
+import { schemaTypes } from "./studio/schemaTypes";
 
 export default defineConfig({
-  name: 'movie-db',
-  title: 'My Movie Database',
+  name: "movie-db",
+  title: "My Movie Database",
 
-  projectId: 'r6qk2n17',
-  dataset: 'production',
+  projectId: process.env.SANITY_PROJECT_ID!,
+  dataset: process.env.SANITY_DATASET!,
 
   plugins: [
     structureTool(),
@@ -18,4 +19,4 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-})
+});
