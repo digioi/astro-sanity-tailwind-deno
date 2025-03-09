@@ -1,6 +1,7 @@
 ---
 import "../../styles/tailwind.css";
 import Layout from '../../layouts/Layout.astro';
+import RichText from '../../components/RichText.astro'
 import { getCollection, getEntry } from 'astro:content';
 export const prerender = true;
 export async function getStaticPaths() {
@@ -20,15 +21,14 @@ type Props = {
 };
 
 const {
-  title, castMembers: cast,
+  title, castMembers: cast, overview
 } = Astro.props as Props;
-// const movie = await getEntry("movies", slug);
 
 ---
 
 <Layout>
    <h1>{title}</h1>
-   <!-- <p>{movie.overview}</p> -->
+   <RichText content={overview} />
    <h2>Cast</h2>
    <ul>
      {cast.map((actor) => (

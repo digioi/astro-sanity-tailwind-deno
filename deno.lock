@@ -1,6 +1,7 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@std/dotenv@*": "0.225.3",
     "npm:@astrojs/check@~0.9.4": "0.9.4_typescript@5.8.2",
     "npm:@astrojs/react@^4.2.1": "4.2.1_@types+react@19.0.10_@types+react-dom@19.0.4__@types+react@19.0.10_react@19.0.0_react-dom@19.0.0__react@19.0.0_vite@6.2.0",
     "npm:@sanity/astro@^3.2.6": "3.2.6_@sanity+client@6.28.3_astro@5.4.2__vite@6.2.0__zod@3.24.2_react@19.0.0_react-dom@19.0.0__react@19.0.0_react-is@19.0.0_sanity@3.78.0__react@19.0.0__react-dom@19.0.0___react@19.0.0__styled-components@6.1.15___react@19.0.0___react-dom@19.0.0____react@19.0.0__@dnd-kit+core@6.3.1___react@19.0.0___react-dom@19.0.0____react@19.0.0__@sanity+types@3.78.0___@types+react@19.0.10__@types+react@19.0.10__@sanity+schema@3.78.0___@types+react@19.0.10__rxjs@7.8.2__react-is@18.3.1__@sanity+color@3.0.6__@sanity+client@6.28.3__vite@6.2.0__esbuild@0.21.5__jsdom@23.2.0__i18next@23.16.8_styled-components@6.1.15__react@19.0.0__react-dom@19.0.0___react@19.0.0_@types+react@19.0.10",
@@ -12,6 +13,7 @@
     "npm:@types/react-dom@^19.0.4": "19.0.4_@types+react@19.0.10",
     "npm:@types/react@^18.0.25": "18.3.18",
     "npm:@types/react@^19.0.10": "19.0.10",
+    "npm:astro-portabletext@~0.11.1": "0.11.1_astro@5.4.2__vite@6.2.0__zod@3.24.2_typescript@5.8.2",
     "npm:astro@^5.4.2": "5.4.2_vite@6.2.0_zod@3.24.2",
     "npm:daisyui@5": "5.0.0",
     "npm:groq@^3.78.0": "3.78.0",
@@ -25,6 +27,11 @@
     "npm:ts-pattern@^5.6.2": "5.6.2",
     "npm:typescript@^5.8.2": "5.8.2",
     "npm:zod@^3.24.2": "3.24.2"
+  },
+  "jsr": {
+    "@std/dotenv@0.225.3": {
+      "integrity": "a95e5b812c27b0854c52acbae215856d9cce9d4bbf774d938c51d212711e8d4a"
+    }
   },
   "npm": {
     "@actions/core@1.11.1": {
@@ -2149,7 +2156,7 @@
       "dependencies": [
         "@sanity/client",
         "@sanity/visual-editing",
-        "astro",
+        "astro@5.4.2_vite@6.2.0_zod@3.24.2",
         "history",
         "react",
         "react-dom",
@@ -3450,6 +3457,14 @@
         "tslib@2.8.1"
       ]
     },
+    "astro-portabletext@0.11.1_astro@5.4.2__vite@6.2.0__zod@3.24.2_typescript@5.8.2": {
+      "integrity": "sha512-z0XqyPtba+U/B7oYsuU/wCYpDVyWdEyNzXvjc8xMTTQxNr8gIEuOg9HgG4xrmpqOraHjLc27Zy9Rvap/46SX+A==",
+      "dependencies": [
+        "@portabletext/toolkit",
+        "@portabletext/types",
+        "astro@5.4.2_vite@6.2.0_zod@3.24.2_typescript@5.8.2"
+      ]
+    },
     "astro@5.4.2_vite@6.2.0_zod@3.24.2": {
       "integrity": "sha512-9Z3fAniIRJaK/o43OroZA1wHUIU+qHiOR9ovlVT/2XQaN25QRXScIsKWlFp0G/zrx5OuuoJ+QnaoHHW061u26A==",
       "dependencies": [
@@ -3499,7 +3514,72 @@
         "shiki",
         "tinyexec",
         "tinyglobby",
-        "tsconfck",
+        "tsconfck@3.1.5",
+        "ultrahtml",
+        "unist-util-visit",
+        "unstorage",
+        "vfile",
+        "vite@6.2.0",
+        "vitefu",
+        "which-pm",
+        "xxhash-wasm",
+        "yargs-parser@21.1.1",
+        "yocto-spinner",
+        "zod@3.24.2",
+        "zod-to-json-schema",
+        "zod-to-ts"
+      ]
+    },
+    "astro@5.4.2_vite@6.2.0_zod@3.24.2_typescript@5.8.2": {
+      "integrity": "sha512-9Z3fAniIRJaK/o43OroZA1wHUIU+qHiOR9ovlVT/2XQaN25QRXScIsKWlFp0G/zrx5OuuoJ+QnaoHHW061u26A==",
+      "dependencies": [
+        "@astrojs/compiler",
+        "@astrojs/internal-helpers",
+        "@astrojs/markdown-remark",
+        "@astrojs/telemetry",
+        "@oslojs/encoding",
+        "@rollup/pluginutils@5.1.4",
+        "@types/cookie",
+        "acorn",
+        "aria-query",
+        "axobject-query",
+        "boxen",
+        "ci-info",
+        "clsx",
+        "common-ancestor-path",
+        "cookie",
+        "cssesc",
+        "debug@4.4.0",
+        "deterministic-object-hash",
+        "devalue",
+        "diff",
+        "dlv",
+        "dset",
+        "es-module-lexer",
+        "esbuild@0.25.0",
+        "estree-walker@3.0.3",
+        "flattie",
+        "github-slugger",
+        "html-escaper",
+        "http-cache-semantics",
+        "js-yaml@4.1.0",
+        "kleur@4.1.5",
+        "magic-string",
+        "magicast",
+        "mrmime",
+        "neotraverse",
+        "p-limit@6.2.0",
+        "p-queue@8.1.0",
+        "picomatch@4.0.2",
+        "preferred-pm",
+        "prompts",
+        "rehype",
+        "semver@7.7.1",
+        "sharp",
+        "shiki",
+        "tinyexec",
+        "tinyglobby",
+        "tsconfck@3.1.5_typescript@5.8.2",
         "ultrahtml",
         "unist-util-visit",
         "unstorage",
@@ -8779,6 +8859,12 @@
     "tsconfck@3.1.5": {
       "integrity": "sha512-CLDfGgUp7XPswWnezWwsCRxNmgQjhYq3VXHM0/XIRxhVrKw0M1if9agzryh1QS3nxjCROvV+xWxoJO1YctzzWg=="
     },
+    "tsconfck@3.1.5_typescript@5.8.2": {
+      "integrity": "sha512-CLDfGgUp7XPswWnezWwsCRxNmgQjhYq3VXHM0/XIRxhVrKw0M1if9agzryh1QS3nxjCROvV+xWxoJO1YctzzWg==",
+      "dependencies": [
+        "typescript@5.8.2"
+      ]
+    },
     "tsconfig-paths@4.2.0": {
       "integrity": "sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==",
       "dependencies": [
@@ -9659,6 +9745,7 @@
         "npm:@types/react-dom@^19.0.4",
         "npm:@types/react@^18.0.25",
         "npm:@types/react@^19.0.10",
+        "npm:astro-portabletext@~0.11.1",
         "npm:astro@^5.4.2",
         "npm:daisyui@5",
         "npm:groq@^3.78.0",

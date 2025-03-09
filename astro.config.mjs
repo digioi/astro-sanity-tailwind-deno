@@ -4,18 +4,19 @@ import tailwindcss from '@tailwindcss/vite';
 import sanity from '@sanity/astro';
 import react from '@astrojs/react';
 import process from "node:process";
+import "jsr:@std/dotenv/load";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  output: 'static',
   vite: {
     // @ts-expect-error: tailwindcss is throwing an error
     plugins: [tailwindcss()],
   },
   integrations: [
     sanity({
-      projectId: process.env['SANITY_PROJECT_ID'],
-      dataset: process.env['SANITY_DATASET'],
+      projectId: process.env['SANITY_STUDIO_PROJECT_ID'],
+      dataset: process.env['SANITY_STUDIO_DATASET'],
       // Set useCdn to false if you're building statically.
       useCdn: false,
       // Access the Studio on your.url/admin
