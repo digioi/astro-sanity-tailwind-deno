@@ -287,3 +287,44 @@ export type Slug = {
 
 export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | CrewMember | CastMember | PlotSummaries | PlotSummary | BlockContent | Screening | SanityFileAsset | Geopoint | Person | Movie | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug;
 export declare const internalGroqTypeReferenceTo: unique symbol;
+// Source: ./src/db/movies.queries.ts
+// Variable: AllMovieQuery
+// Query: *[_type == 'movie']
+export type AllMovieQueryResult = Array<{
+  _id: string;
+  _type: "movie";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  overview?: BlockContent;
+  releaseDate?: string;
+  poster?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  externalId?: number;
+  popularity?: number;
+  castMembers?: Array<{
+    _key: string;
+  } & CastMember>;
+  crewMembers?: Array<{
+    _key: string;
+  } & CrewMember>;
+}>;
+
+// Query TypeMap
+import "@sanity/client";
+declare module "@sanity/client" {
+  interface SanityQueries {
+    "*[_type == 'movie']": AllMovieQueryResult;
+  }
+}

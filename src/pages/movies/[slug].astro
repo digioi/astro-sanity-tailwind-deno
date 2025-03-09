@@ -1,4 +1,5 @@
 ---
+import { AllMovieQueryResults } from "../../../sanity.types.ts"
 import "../../styles/tailwind.css";
 import Layout from '../../layouts/Layout.astro';
 import RichText from '../../components/RichText.astro'
@@ -12,13 +13,7 @@ export async function getStaticPaths() {
   }));
 }
 
-type Props = {
-  title: string;
-  castMembers: {
-    name: string;
-    characterName: string;
-  }[];
-};
+type Props = AllMovieQueryResults[number];
 
 const {
   title, castMembers: cast, overview

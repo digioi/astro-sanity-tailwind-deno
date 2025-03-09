@@ -3,11 +3,11 @@ import { AstroError } from "astro/errors";
 
 import { sanityClient } from 'sanity:client';
 import { match } from 'ts-pattern';
-import groq from 'groq';
+import { AllMovieQuery } from "@/db/movies.queries";
 
 const getQuery = (contentType: string) => (
   match(contentType)
-    .with("movie", () => groq`*[_type == 'movie']`)
+    .with("movie", () => AllMovieQuery)
     .otherwise(() => null)
 );
 
