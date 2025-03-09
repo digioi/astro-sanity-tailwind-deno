@@ -12,6 +12,12 @@ export default defineConfig({
   vite: {
     // @ts-expect-error: tailwindcss is throwing an error
     plugins: [tailwindcss()],
+    define: {
+      "process.env": { 
+        SANITY_STUDIO_PROJECT_ID: process.env['SANITY_STUDIO_PROJECT_ID'],
+        SANITY_STUDIO_DATASET: process.env['SANITY_STUDIO_DATASET'],
+      },
+    }
   },
   integrations: [
     sanity({
