@@ -1,12 +1,11 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from "astro:content";
 
-import { sanityLoader } from './lib/sanityLoader';
-
+import { sanityLoader } from "./lib/sanityLoader";
 
 const movies = defineCollection({
   loader: sanityLoader({
-    contentType: 'movie',
+    contentType: "movie",
   }),
-})
+});
 
 export const collections = { movies };

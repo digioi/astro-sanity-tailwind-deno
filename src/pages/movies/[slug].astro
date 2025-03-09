@@ -1,8 +1,8 @@
 ---
-import { AllMovieQueryResults } from "../../../sanity.types.ts"
-import "../../styles/tailwind.css";
-import Layout from '../../layouts/Layout.astro';
-import RichText from '../../components/RichText.astro'
+import { AllMovieQueryResults } from "@/../sanity.types.ts"
+import "@/styles/tailwind.css";
+import Layout from '@/layouts/Layout.astro';
+import RichText from '@/components/RichText.astro'
 import { getCollection, getEntry } from 'astro:content';
 export const prerender = true;
 export async function getStaticPaths() {
